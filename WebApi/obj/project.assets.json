@@ -2886,11 +2886,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PRIME TECHNOLOGY\\Desktop\\.net\\Home_Works\\home-work 14-04-2025\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\PRIME TECHNOLOGY\\Desktop\\.net\\Home_Works\\Home-Work 04-2025\\home-work 14-04-2025\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "C:\\Users\\PRIME TECHNOLOGY\\Desktop\\.net\\Home_Works\\home-work 14-04-2025\\WebApi\\WebApi.csproj",
+      "projectPath": "C:\\Users\\PRIME TECHNOLOGY\\Desktop\\.net\\Home_Works\\Home-Work 04-2025\\home-work 14-04-2025\\WebApi\\WebApi.csproj",
       "packagesPath": "C:\\Users\\PRIME TECHNOLOGY\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PRIME TECHNOLOGY\\Desktop\\.net\\Home_Works\\home-work 14-04-2025\\WebApi\\obj\\",
+      "outputPath": "C:\\Users\\PRIME TECHNOLOGY\\Desktop\\.net\\Home_Works\\Home-Work 04-2025\\home-work 14-04-2025\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PRIME TECHNOLOGY\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2905,8 +2905,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\PRIME TECHNOLOGY\\Desktop\\.net\\Home_Works\\home-work 14-04-2025\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\PRIME TECHNOLOGY\\Desktop\\.net\\Home_Works\\home-work 14-04-2025\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\PRIME TECHNOLOGY\\Desktop\\.net\\Home_Works\\Home-Work 04-2025\\home-work 14-04-2025\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\PRIME TECHNOLOGY\\Desktop\\.net\\Home_Works\\Home-Work 04-2025\\home-work 14-04-2025\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

@@ -97,22 +97,67 @@ public class BookService(DataContext context) : IBookService
         return new Response<GetBookDto>(book);
     }
 
-    public async Task<Response<List<GetBookDto>>> GetBookByAuthor(string name)
+    public async Task<Response<List<GetBookDto>>> GetBookByAuthor(int authorId)
     {
-        throw new NotImplementedException();
+        var books = await context.Books
+            .Include(b => b.Author)
+            .Where(b => b.AuthorId == authorId)
+            .ToListAsync();
+
+        if (!books.Any())
+        {
+            return new Response<List<GetBookDto>>(HttpStatusCode.NotFound, "Book not found!");
+        }
         
-        
+        var result = books.Select(b => new GetBookDto
+        {
+            Id = b.Id,
+            Title = b.Title,
+            Genre = b.Genre,
+            PublishedDate = b.PublishedDate,
+            AuthorId =  b.AuthorId
+        }).ToList();
+        return new Response<List<GetBookDto>>(result);
     }
 
     public async Task<Response<List<GetBookDto>>> GetBookByGenre(string genre)
     {
-        throw new NotImplementedException();
+        var books = await  context.Books
+            .Include(b => b.Genre)
+            .Where(b => b.Genre == genre)
+            .ToListAsync();
+
+        if (!books.Any())
+        {
+            return new Response<List<GetBookDto>>(HttpStatusCode.NotFound, "Book not found!");
+        }
+
+        var result = books.Select(b => new GetBookDto
+        {
+            Id = b.Id,
+            Title = b.Title,
+            Genre = b.Genre,
+            PublishedDate = b.PublishedDate,
+            AuthorId = b.AuthorId
+        }).ToList();
+        return new Response<List<GetBookDto>>(result);
     }
 
     public async Task<Response<List<GetBookDto>>> GetRecentlyPublishedBooks(int years)
     {
-        throw new NotImplementedException();
+        var books = await context.Books
+            .Include(b => b.PublishedDate)
+            .Where(b => b.PublishedDate.Year == years)
+            .ToListAsync();
+        
+        var result = books.Select(b => new GetBookDto
+        {
+            Id = b.Id,
+            Title = b.Title,
+            Genre = b.Genre,
+            PublishedDate = b.PublishedDate,
+            AuthorId = b.AuthorId
+        }).ToList();
+        return new Response<List<GetBookDto>>(result);
     }
-
-
 }

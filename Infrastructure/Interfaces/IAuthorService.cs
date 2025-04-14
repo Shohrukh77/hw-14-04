@@ -9,5 +9,5 @@ public interface IAuthorService
     Task<Response<GetAuthorDto>> UpdateAuthorAsync(int id, UpdateAuthorDto authorDto);
     Task<Response<string>> DeleteAuthorAsync(int id);
     Task<Response<GetAuthorDto>> GetAuthorAsync(int id);
-    Task<Response<List<GetAuthorDto>>> GetAuthorsWithMostBooksAsync(int count);
+    Task<Response<List<GetAuthorDto>>> GetAuthorsWithMostBooksAsync();
 }

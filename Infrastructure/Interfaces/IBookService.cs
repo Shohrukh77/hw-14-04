@@ -9,7 +9,7 @@ public interface IBookService
     Task<Response<GetBookDto>> UpdateBook(int id, UpdateBookDto bookDto);
     Task<Response<string>> DeleteBook(int id);
     Task<Response<GetBookDto>> GetBook(int id);
-    Task<Response<List<GetBookDto>>> GetBookByAuthor(string name);
+    Task<Response<List<GetBookDto>>> GetBookByAuthor(int authorId);
     Task<Response<List<GetBookDto>>> GetBookByGenre(string genre);
     Task<Response<List<GetBookDto>>> GetRecentlyPublishedBooks(int years);
 }

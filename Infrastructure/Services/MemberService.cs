@@ -5,6 +5,7 @@ using Domain.Entities;
 using Domain.Responses;
 using Infrastructure.Data;
 using Infrastructure.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Services;
 
@@ -88,14 +89,29 @@ public class MemberService(DataContext context) : IMemberService
         return new Response<GetMemberDto>(res);
     }
 
-    public Task<Response<List<GetMemberDto>>> GetMemberWithRecentBorrows(int days)
+    public async Task<Response<List<GetMemberDto>>> GetMemberWithRecentBorrows(int days)
     {
-        
-        
+        var members = await context.Members
+            .Include(m => m.MembershipDate)
+            .Where(m => m.MembershipDate.Date > DateTime.Now.AddDays(-days))
+            .ToListAsync();
+
+        if (!members.Any())
+        {
+            return new Response<List<GetMemberDto>>(HttpStatusCode.NotFound, "No records found");
+        }
+        var res = members.Select(m => new GetMemberDto
+        {
+            Email = m.Email,
+            Name = m.Name,
+            MembershipDate = m.MembershipDate
+        }).ToList();
+        return new Response<List<GetMemberDto>>(res);
     }
 
     public Task<Response<List<GetMemberDto>>> GetTopNMemberByBorrows(int n)
     {
-        
+        var  members = context.Members
+            
     }
 }

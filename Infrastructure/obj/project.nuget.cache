@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z203i3Gm0tk=",
+  "dgSpecHash": "yDsHc/CckJg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\PRIME TECHNOLOGY\\Desktop\\.net\\Home_Works\\home-work 14-04-2025\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\PRIME TECHNOLOGY\\Desktop\\.net\\Home_Works\\Home-Work 04-2025\\home-work 14-04-2025\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PRIME TECHNOLOGY\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.3\\microsoft.entityframeworkcore.9.0.3.nupkg.sha512",
     "C:\\Users\\PRIME TECHNOLOGY\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.3\\microsoft.entityframeworkcore.abstractions.9.0.3.nupkg.sha512",
